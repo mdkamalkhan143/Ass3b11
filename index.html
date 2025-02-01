@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nature's Platter Shop</title>
+    <link rel="shortcut icon" href="Icons/Leaf.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/69c46a7e81.js" crossorigin="anonymous"></script>
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --primary: #179800;
+        --secondary: #EFEBE3;
+    }
+    .pop{
+        font-family: "Poppins", serif;
+    }
+    .sora{
+        font-family: "Sora", serif;
+    }
+    /* .anime{
+        background: linear-gradient(to right, #179800, #FFC83D, #EFEBE3);
+        background-size: 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animate-gradient 2.5s linear infinite;
+    } */
+    @keyframes animate-gradient{
+        to {
+            background-position: 200%;
+        }
+    }
+    @keyframes bounce-scale {
+        0%, 100% { 
+            transform: translateY(0) scale(1); 
+        }
+        50% { 
+            transform: translateY(-65px) scale(0.90); 
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="sora">
+        <!-- Navbar -->
+        <nav class="max-w-[1320px] mx-auto">
+            <section class="flex items-center justify-between md:m-6 p-4 md:p-0 border border-[#179800] md:border-0">
+                <!-- Logos -->
+                <img class="hidden xl:block mr-44" src="Images/logo-header.png" alt="Header Logo">
+                <img class="xl:hidden" src="Icons/Leaf.png" alt="Header Logo">
+                <!-- Dropdown Menu Bar for Smaller screen -->
+                <div class="dropdown dropdown-left md:hidden">
+                    <div tabindex="0" role="button" class=""><img class="md:hidden hover:bg-gray-100 hover:rounded-lg" src="Icons/Menu Bar.png"
+                            alt="Menu Icon"></div>
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 gap-[2px] shadow">
+                        <li><a class="md:text-base lg:text-xl text-black hover:text-[var(--primary)]"
+                                href="#">Products</a></li>
+                        <li><a class="md:text-base lg:text-xl text-black hover:text-[var(--primary)]"
+                                href="#">Services</a></li>
+                        <li><a class="md:text-base lg:text-xl text-black hover:text-[var(--primary)]" href="#">Contact
+                                Us</a></li>
+                        <li><button
+                            class="text-black border border-[#179800] rounded-[8px] transition duration-300 ease-in-out hover:bg-[#179800] hover:text-white">Login</button></li>
+                        <li><button
+                            class="text-black border border-[#179800] rounded-[8px] transition duration-300 ease-in-out hover:bg-[#179800] hover:text-white">Register</button></li>
+                    </ul>
+                </div>
+                <!-- Middle Links -->
+                <div class="hidden md:flex md:gap-8">
+                    <a class="md:text-base lg:text-xl text-black hover:text-[var(--primary)]" href="#">Products</a>
+                    <a class="md:text-base lg:text-xl text-black hover:text-[#FFC83D]" href="#">Services</a>
+                    <a class="md:text-base lg:text-xl text-black hover:text-[var(--primary)]" href="#">Contact Us</a>
+                </div>
+                <!-- Right Side Links & Buttons -->
+                <div class="hidden md:flex md:gap-4 md:items-center">
+                    <!-- Search & Cart Icons -->
+                    <a class="hover:scale-95" href=""><img src="Icons/Search Icon.png" alt="Search Icon"></a>
+                    <a class="hover:scale-95" href=""><img src="Icons/Cart Icon.png" alt="Cart Icon"></a>
+                    <!-- Login & Register Buttons -->
+                    <button
+                        class="text-black md:text-base lg:text-xl md:px-5 md:py-2 lg:px-[29px] lg:py-[9px] border border-[#179800] rounded-[8px] transition duration-300 ease-in-out hover:bg-[#179800] hover:text-white">Login</button>
+                    <button
+                        class="text-white md:text-base lg:text-xl md:px-5 md:py-2 lg:px-[30px] lg:py-[10px] bg-[#179800] rounded-lg transition duration-300 ease-in-out hover:bg-white hover:text-[#179800] hover:border hover:border-[#179800] hover:lg:px-[29px] hover:lg:py-[9px]">Register</button>
+                </div>
+            </section>
+        </nav>
+
+        <!-- Banner -->
+        <section class="" style="background: linear-gradient (180deg, #FFF 0%, #EFEBE3 100%);">
+            <div class="max-w-[1030px] mx-auto bg-cover bg-center my-12 md:my-20 lg:my-28">
+                <!-- Banner Title -->
+                <div class="px-8 mx-auto">
+                    <h1 class="text-black text-center text-[32px] md:text-5xl lg:text-[56px] font-semibold">Freshness
+                        <span class="text-[#179800]">You Can<br>Count</span> On, Prices You’ll Love!</h1>
+                    <!-- Banner Description -->
+                    <p
+                        class="md:max-w-[800px] mx-auto text-black opacity-80 text-base md:text-lg lg:text-xl text-center p-4 md:p-6 lg:p-8">
+                        Shop your daily essentials at unbeatable prices. From fresh products to pantry staples, we’ve got
+                        you covered every day!</p>
+                </div>
+                <!-- Banner Image -->
+                <div class="animate-[bounce-scale_3s_infinite] flex justify-center max-w-full"><img
+                        src="Images/hero-vegetables.png" alt=""></div>
+            </div>
+        </section>
+    </header>
+
+    <main class="sora">
+
+        <!-- Services section -->
+        <section class="max-w-[1320px] mx-auto mb-12 md:mb-16 lg:mb-32">
+            <!-- Title -->
+            <h3
+                class="pl-2 text-[var(--primary)] font-semibold text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 lg:mb-12">
+                Services</h3>
+            <!-- Card Container -->
+            <div class="px-[18px] md:px-5 lg:px-0 grid md:grid-cols-3 gap-3 md:gap-6">
+                <!-- Card 1 -->
+                <div
+                    class="flex flex-col justify-center items-center rounded-2xl bg-[var(--secondary)] px-6 md:px-7 lg:px-8 shadow-lg hover:shadow-2xl">
+                    <div class="bg-white rounded-full p-4 md:p-5 lg:p-6 my-6 md:my-7 flex justify-center items-center">
+                        <img class="max-w-full" src="Images/service.png" alt="24/7 Icon">
+                    </div>
+                    <h4 class="text-center text-xl md:text-2xl font-semibold">24/7 Services</h4>
+                    <p class="text-black opacity-70 mt-3 mb-8 lg:mb-8 text-center text-base md:text-lg lg:text-xl">
+                        Fresh, high-quality vegetables delivered daily. Affordable prices, fast delivery, freshness &
+                        seasonal products available.</p>
+                </div>
+                <!-- Card 2 -->
+                <div
+                    class="flex flex-col justify-center items-center rounded-2xl bg-[var(--secondary)] px-6 md:px-7 lg:px-8 shadow-lg hover:shadow-2xl">
+                    <div>
+                        <img class="max-w-full my-6 md:my-7 bg-white rounded-full p-4 md:p-5 lg:p-6"
+                            src="Images/delivery.png" alt="24/7 Icon">
+                    </div>
+                    <h4 class="text-center text-xl md:text-2xl font-semibold">Fast Delivery</h4>
+                    <p class="text-black opacity-70 mt-3 mb-8 lg:mb-8 text-center text-base md:text-lg lg:text-xl">Get
+                        your fresh vegetables delivered quickly with our fast and reliable service. Guaranteed
+                        freshness, straight to your door!</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="flex flex-col justify-center items-center rounded-2xl bg-[var(--secondary)] px-6 md:px-7 lg:px-8 shadow-lg hover:shadow-2xl">
+                    <div>
+                        <img class="max-w-full my-6 md:my-7 bg-white rounded-full p-4 md:p-5 lg:p-6"
+                            src="Images/healthy.png" alt="24/7 Icon">
+                    </div>
+                    <h4 class="text-center text-xl md:text-2xl font-semibold">Healthy Products</h4>
+                    <p class="text-black opacity-70 mt-3 mb-8 lg:mb-8 text-center text-base md:text-lg lg:text-xl">We
+                        offer fresh, organic, and high-quality vegetables to ensure a healthy lifestyle for you and your
+                        family.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Products Section -->
+        <section class="bg-[var(--secondary)]">
+            <div class="max-w-[1320px] mx-auto pt-12 md:pt-16 lg:pt-32 pb-12 md:pb-16 lg:pb-32 mb-12 md:mb-16 lg:mb-32">
+                <!-- Title -->
+                <h3
+                    class="pl-2 text-[var(--primary)] font-semibold text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 lg:mb-12">
+                    Popular Products</h3>
+                <!-- Vegetables Cards Container -->
+                <div class="px-2 lg:px-0 lg:flex lg:items-center lg:gap-6">
+                    <!-- Green Card -->
+                    <div class="relative h-[360px] lg:h-[378px] lg:w-1/3 lg:max-w-[424px] rounded-lg shadow-lg hover:shadow-2xl"
+                        style="background: linear-gradient(135deg, #22c505 0%, #EFEBE3 100%);">
+                        <div class="pl-5 md:pl-6 pt-6 md:pt-7 lg:pt-8">
+                            <h2 class="pop text-white text-xl md:text-2xl lg:text-3xl">30% off</h2>
+                            <p class="text-black opacity-75 text-xs md:text-sm lg:text-base my-3 md:my-4 lg:my-5">
+                                Discover a world of treats, toys, and <br>essentials handpicked for you.</p>
+                            <button
+                                class="text-black text-xs md:text-base lg:text-xl px-3 md:px-5 py-1 md:py-2 lg:px-8 lg:py-[9px] bg-white rounded-[8px] transition duration-300 ease-in-out hover:bg-[#179800] hover:text-white flex gap-2 items-center group">
+                                <p>Buy Now</p> <i class="group-hover:animate-spin duration-300 fa-solid fa-tag"></i></button>
+                        </div>
+                        <img class="absolute right-0 bottom-0 max-w-228 lg:max-w-full"
+                            src="Images/vegetable-offer.png" alt="Vegetable Pic">
+                    </div>
+                    <!-- Small Cards Container -->
+                    <div class="mt-6 lg:mt-0 grid grid-cols-2 gap-[14px] md:grid-cols-3 md:gap-4 lg:gap-6">
+                        <!-- Card 1 -->
+                        <div class="flex items-center gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-white shadow-md">
+                            <img class="max-w-[70px] max-h-[70px] bg-[var(--secondary)] rounded-md"
+                                src="Images/Onion.png" alt="Onion Pic">
+                            <div>
+                                <div class="flex gap-2 md:gap-[10px]">
+                                    <div><img src="Icons/Star Icon.png" alt="Star icon"></div>
+                                    <p class="text-[10px] md:text-sm lg:text-base">4.5</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs md:text-lg lg:text-xl font-medium">Onion 1KG</h4>
+                                    <p class="text-[10px] md:text-sm lg:text-base">$39.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="flex items-center gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-white shadow-md">
+                            <img class="max-w-[70px] max-h-[70px] bg-[var(--secondary)] rounded-md"
+                                src="Images/Tomato.png" alt="Tomato Pic">
+                            <div>
+                                <div class="flex gap-2 md:gap-[10px]">
+                                    <div><img src="Icons/Star Icon.png" alt="Star icon"></div>
+                                    <p class="text-[10px] md:text-sm lg:text-base">4.5</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs md:text-lg lg:text-xl font-medium">Tomato 500g</h4>
+                                    <p class="text-[10px] md:text-sm lg:text-base">$29.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="flex items-center gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-white shadow-md">
+                            <img class="max-w-[70px] max-h-[70px] bg-[var(--secondary)] rounded-md"
+                                src="Images/Potato.png" alt="Potato Pic">
+                            <div>
+                                <div class="flex gap-2 md:gap-[10px]">
+                                    <div><img src="Icons/Star Icon.png" alt="Star icon"></div>
+                                    <p class="text-[10px] md:text-sm lg:text-base">4.5</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs md:text-lg lg:text-xl font-medium">Potato 1KG</h4>
+                                    <p class="text-[10px] md:text-sm lg:text-base">$49.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="flex gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-white items-center shadow-md">
+                            <img class="max-w-[70px] max-h-[70px] bg-[var(--secondary)] rounded-md"
+                                src="Images/Potato.png" alt="Potato Pic">
+                            <div>
+                                <div class="flex gap-2 md:gap-[10px]">
+                                    <div><img src="Icons/Star Icon.png" alt="Star icon"></div>
+                                    <p class="text-[10px] md:text-sm lg:text-base">4.5</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs md:text-lg lg:text-xl font-medium">Potato 500g</h4>
+                                    <p class="text-[10px] md:text-sm lg:text-base">$25.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="flex gap-2 items-center md:gap-3 p-2 md:p-4 rounded-[10px] bg-white shadow-md">
+                            <img class="max-w-[70px] max-h-[70px] bg-[var(--secondary)] rounded-md"
+                                src="Images/Carrot.png" alt="Carrot Pic">
+                            <div>
+                                <div class="flex gap-2 md:gap-[10px]">
+                                    <div><img src="Icons/Star Icon.png" alt="Star icon"></div>
+                                    <p class="text-[10px] md:text-sm lg:text-base">4.5</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs md:text-lg lg:text-xl font-medium">Carrot 1KG</h4>
+                                    <p class="text-[10px] md:text-sm lg:text-base">$45.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="flex items-center gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-white shadow-md">
+                            <img class="max-w-[70px] max-h-[70px] bg-[var(--secondary)] rounded-md"
+                                src="Images/garlic.png" alt="Garlic Pic">
+                            <div>
+                                <div class="flex gap-2 md:gap-[10px]">
+                                    <div><img src="Icons/Star Icon.png" alt="Star icon"></div>
+                                    <p class="text-[10px] md:text-sm lg:text-base">4.5</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs md:text-lg lg:text-xl font-medium">Garlic 500g</h4>
+                                    <p class="text-[10px] md:text-sm lg:text-base">$20.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 7 -->
+                        <div class="flex items-center gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-white shadow-md">
+                            <img class="max-w-[70px] max-h-[70px] bg-[var(--secondary)] rounded-md"
+                                src="Images/Onion.png" alt="Onion Pic">
+                            <div>
+                                <div class="flex gap-2 md:gap-[10px]">
+                                    <div><img src="Icons/Star Icon.png" alt="Star icon"></div>
+                                    <p class="text-[10px] md:text-sm lg:text-base">4.5</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs md:text-lg lg:text-xl font-medium">Onion 2KG</h4>
+                                    <p class="text-[10px] md:text-sm lg:text-base">$75.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 8 -->
+                        <div class="flex items-center gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-white shadow-md">
+                            <img class="max-w-[70px] max-h-[70px] bg-[var(--secondary)] rounded-md"
+                                src="Images/Tomato.png" alt="Tomato Pic">
+                            <div>
+                                <div class="flex gap-2 md:gap-[10px]">
+                                    <div><img src="Icons/Star Icon.png" alt="Star icon"></div>
+                                    <p class="text-[10px] md:text-sm lg:text-base">4.5</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs md:text-lg lg:text-xl font-medium">Tomato 1KG</h4>
+                                    <p class="text-[10px] md:text-sm lg:text-base">$49.99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 9 -->
+                        <div class=" card9 flex items-center gap-2 md:gap-3 p-2 md:p-4 rounded-[10px] bg-white shadow-md">
+                            <img class="max-w-[70px] max-h-[70px] bg-[var(--secondary)] rounded-md"
+                                src="Images/Potato.png" alt="Potato Pic">
+                            <div>
+                                <div class="flex gap-2 md:gap-[10px]">
+                                    <div><img src="Icons/Star Icon.png" alt="Star icon"></div>
+                                    <p class="text-[10px] md:text-sm lg:text-base">4.5</p>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs md:text-lg lg:text-xl font-medium">Potato 2KG</h4>
+                                    <p class="text-[10px] md:text-sm lg:text-base">$95.99</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers Section -->
+        <section class="max-w-[1320px] mx-auto">
+            <!-- Title -->
+            <h3
+                class="pl-2 text-[var(--primary)] font-semibold text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 lg:mb-12 px-2 md:px-0">
+                Arrival & Offers</h3>
+            <!-- Offer Cards Container -->
+            <div class="md:flex md:gap-5 md:justify-center px-3 md:px-0 mb-12 md:mb-20 lg:mb-36">
+                <!-- Green Card -->
+                <div
+                    class="[flex-3] xl:w-[780px] bg-[#115414] rounded-xl md:rounded-3xl flex items-center justify-between lg:gap-12 mb-4 md:mb-0 shadow-xl hover:shadow-2xl">
+                    <div class="py-[26px] md:py-8 lg:py-12 pl-[18px] md:pl-6 lg:pl-[40px]">
+                        <img src="Images/daawat-logo.png" alt="Daawat Logo">
+                        <button
+                            class="pop md:tracking-wide text-white px-[18px] md:px-7 lg:px-9 py-2 md:py-3 lg:py-[14px] bg-[#63B760] rounded-lg md:rounded-xl my-[18px] md:my-6 lg:my-8 hover:shadow-lg transition duration-300 ease-in-out hover:bg-[#09e405]">Cook
+                            Exotic Dishes</button>
+                        <h5 class="pop text-white text-[22px] md:text-3xl lg:text-[40px] font-medium">UP to <span
+                                class="font-bold">20% OFF</span></h5>
+                    </div>
+                    <div>
+                        <img class="pt-2 lg:pt-3" src="Images/daawat-mock-up.png" alt="Daawat Mock UP">
+                    </div>
+                </div>
+                <!-- Blue Card -->
+                <div
+                    class="[flex-2] bg-[#102861] rounded-xl md:rounded-3xl flex items-center justify-between lg:gap-5 shadow-xl hover:shadow-2xl">
+                    <div class="py-[26px] md:py-7 pl-[18px] md:pl-5 lg:pl-8">
+                        <img src="Images/india-gate-logo.png" alt="India Gate Logo">
+                        <button
+                            class="pop md:tracking-wide text-white px-[18px] md:px-7 lg:px-9 py-2 md:py-3 lg:py-[14px] bg-[#2A4D97] rounded-lg md:rounded-xl my-2 md:my-3 lg:my-4 hover:shadow-lg transition duration-300 ease-in-out hover:bg-[#044ae0]">World's
+                            No.1 Rice</button>
+                        <h5 class="pop text-white text-[22px] md:text-3xl lg:text-[40px] font-medium">UP to <span
+                                class="font-semibold">40% OFF</span></h5>
+                    </div>
+                    <div>
+                        <img class="max-w-full pt-2 pr-1 md:pr-[10px] lg:pt-3" src="Images/india-gate-mock-up.png" alt="India Gate Mock UP">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="bg-[#EFEBE3] py-10 mb-[340px] md:mb-[240px] lg:mb-[350px]">
+            <div class="container max-w-[1320px] mx-auto px-4">
+                <h2
+                    class="pl-2 text-[var(--primary)] font-semibold text-2xl md:text-3xl lg:text-4xl mb-8 md:mb-10 lg:mb-12">
+                    Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq1" class="hidden peer">
+                        <label for="faq1"
+                            class="w-full text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#EFEBE3] hover:bg-[#D8D5C9] cursor-pointer flex justify-between items-center">
+                            What type of vegetables do you sell?
+                            <i class="fa-solid fa-chevron-down text-[#179800]"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            We offer variety of fresh vegetables, including leafy greens, root vegetables, tomatoes,
+                            peppers, and more. You can find seasonal and organic options as well.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq2" class="hidden peer">
+                        <label for="faq2"
+                            class="w-full text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#EFEBE3] hover:bg-[#D8D5C9] cursor-pointer flex justify-between items-center">
+                            Do you offer delivery services?
+                            <i class="fa-solid fa-chevron-down text-[#179800]"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            Yes, we provide delivery services within a certain area. You can order your vegetables
+                            online, and we’ll have them delivered straight to your door.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq3" class="hidden peer">
+                        <label for="faq3"
+                            class="w-full text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#EFEBE3] hover:bg-[#D8D5C9] cursor-pointer flex justify-between items-center">
+                            Are the vegetables organic?
+                            <i class="fa-solid fa-chevron-down text-[#179800]"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            Many of our vegetables are grown organically, and we take pride in offering healthy and
+                            pesticide-free options. Look for the "organic" label on our products.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq4" class="hidden peer">
+                        <label for="faq4"
+                            class="w-full text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#EFEBE3] hover:bg-[#D8D5C9] cursor-pointer flex justify-between items-center">
+                            What is the return policy?
+                            <i class="fa-solid fa-chevron-down text-[#179800]"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            If you're not satisfied with your purchase, you can return it within 7 days for a full
+                            refund or exchange. Please keep the receipt for easy processing.
+                        </div>
+                    </div>
+                    <!-- FAQ Item 5 -->
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <input type="checkbox" id="faq5" class="hidden peer">
+                        <label for="faq5"
+                            class="w-full text-left px-6 py-4 text-base md:text-lg lg:text-xl font-medium lg:font-semibold bg-[#EFEBE3] hover:bg-[#D8D5C9] cursor-pointer flex justify-between items-center">
+                            How can I place an order?
+                            <i class="fa-solid fa-chevron-down text-[#179800]"></i>
+                        </label>
+                        <div class="px-6 py-4 text-gray-700 peer-checked:block hidden">
+                            You can place an order by visiting our website and selecting the vegetables you'd like to
+                            buy. Choose your delivery option and proceed to checkout.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Grocery News Section -->
+        <section class="relative bg-[var(--primary)] min-h-[260px] md:min-h-[160px] lg:min-h-[220px]">
+            <div class="text-center lg:text-left absolute z-1 left-0 right-0 bottom-0 px-4 md:px-5">
+                <div
+                    class="max-w-[1320px] mx-auto bg-[var(--secondary)] flex flex-col md:flex-row justify-center md:justify-between items-center md:gap-12 lg:gap-28 md:px-7 py-4 md:py-6 lg:px-[122px] lg:py-[54px] rounded-3xl">
+                    <!-- Basket -->
+                    <div><img class="max-w-full" src="Images/vegetable-busket.png" alt="Vegetable Basket "></div>
+                    <!-- Description & Info Field -->
+                    <div class="flex flex-col gap-4 md:gap-6 lg:gap-9 justify-center px-2 md:px-0">
+                        <h2
+                            class="text-[var(--primary)] lg:text-black text-[22px] md:text-7 lg:text-[32px] font-bold">
+                            Get Grocery News!</h2>
+                        <p class="opacity-80 text-black text-base md:text-lg lg:text-xl">Exclusive training
+                            tips, ticks, product deals and more.</p>
+                        <!-- E-mail field -->
+                        <input type="email" placeholder="Enter Your Email...."
+                            class="bg-white h-[42px] md:h-[54px] lg:h-[68px] focus:outline-none shadow-lg rounded-md pl-3 md:pl-4 md:pr-48 lg:pr-72 placeholder:text-sm md:placeholder:text-base ">
+                        <!-- Grocery Button -->
+                        <div>
+                            <button
+                                class="text-white text-sm md:text-base bg-[var(--primary)] rounded-md md:rounded-lg lg:text-xl px-6 py-2 md:px-7 md:py-2 lg:px-[30px] lg:py-[10px] transition duration-300 ease-in-out hover:bg-white hover:text-[#179800] hover:border hover:border-[#26f102] hover:lg:px-[29px] hover:lg:py-[9px] hover:shadow-2xl">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="sora bg-[var(--primary)]">
+        <section
+            class="max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-3 py-12 md:py-16 lg:py-32 md:justify-items-end md:items-end px-5 xl:px-0">
+            <!-- Logo & Description -->
+            <div>
+                <div class="mb-3 md:mb-4">
+                    <img src="Images/logo-footer.png" alt="Logo">
+                </div>
+                <p class="text-white opacity-70 text-base md:text-lg lg:text-xl">Discover a world of treats, toys, and
+                    essentials handpicked for your furry friends</p>
+            </div>
+            <!-- Links -->
+            <div class="flex flex-col gap-5 md:gap-6 lg:gap-8 mt-3 md:mt-0">
+                <a class="md:text-base lg:text-xl text-white transition duration-300 ease-in-out hover:underline hover:shadow-lg"
+                    href="#">Products</a>
+                <a class="md:text-base lg:text-xl text-white transition duration-300 ease-in-out hover:underline hover:shadow-lg"
+                    href="#">Services</a>
+                <a class="md:text-base lg:text-xl text-white transition duration-300 ease-in-out hover:underline hover:shadow-lg"
+                    href="#">Contact Us</a>
+            </div>
+            <!-- Social Media Icons -->
+            <div class="mt-3 md:mt-0">
+                <h6 class="text-[var(--secondary)] text-sm md:text-base mb-4">Follow Us</h6>
+                <div class="flex gap-5">
+                    <a href="https://www.facebook.com/iamparvejmosharrof" target="_blank"><i
+                        class="fa-brands fa-facebook text-xl lg:text-2xl text-white transition duration-300 ease-in-out hover:shadow-xl hover:scale-110"></i></a>
+                    <a href="https://www.instagram.com/iamparvejmosharrof/" target="_blank"><i
+                        class="fa-brands fa-instagram text-xl lg:text-2xl text-white transition duration-300 ease-in-out hover:shadow-xl hover:scale-110"></i></a>
+                    <a href=""><i
+                        class="fa-brands fa-linkedin text-xl lg:text-2xl text-white transition duration-300 ease-in-out hover:shadow-xl hover:scale-110"></i></a>
+                    <a href=""><i
+                        class="fa-brands fa-youtube text-xl lg:text-2xl text-white transition duration-300 ease-in-out hover:shadow-xl hover:scale-110"></i></a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <p class="text-center text-3xl text-green-700">@iamparvejmosharrof</p>
+</body>
+
+</html>
